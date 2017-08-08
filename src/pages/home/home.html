@@ -1,14 +1,10 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h2>User List</h2>
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      {{user.name}}
+      <button ion-button block color="lightprimary" (click)="edit(user.id)">edit</button>
+    </ion-item>
+  </ion-list>
+<button ion-button block color="lightprimary" (click)="insert()">ADD</button>
 </ion-content>
