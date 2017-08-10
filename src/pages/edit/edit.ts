@@ -14,7 +14,7 @@ import { RestapiServiceProvider } from '../../providers/restapi-service/restapi-
   templateUrl: 'edit.html',
 })
 export class EditPage {
-user = { name: ''};
+user = {id:'', name: ''};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restapiService: RestapiServiceProvider) {
   }
@@ -23,8 +23,9 @@ user = { name: ''};
     console.log('ionViewDidLoad EditPage');
   }
 
-  editUser() {
-  	this.restapiService.editUser(this.user).then((result) => {
+  editUser(id) {
+    console.log(this.user);
+  	this.restapiService.editaUser(id,this.user).then((result) => {
     	console.log(result);
   	}, (err) => {
     	console.log(err);

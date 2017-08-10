@@ -44,9 +44,10 @@ export class RestapiServiceProvider {
     });
   }
 
-  editUser(data) {
+  editaUser(id,data) {
+    
     return new Promise((resolve, reject) => {
-      this.http.put(this.apiUrl+'/peoples/1', JSON.stringify(data))
+      this.http.put(this.apiUrl+'/peoples/'+id, JSON.stringify(data))
         .subscribe(res => {
           resolve(res);
         }, (err) => {

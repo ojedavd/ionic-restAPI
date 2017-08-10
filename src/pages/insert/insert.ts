@@ -14,7 +14,7 @@ import { RestapiServiceProvider } from '../../providers/restapi-service/restapi-
   templateUrl: 'insert.html',
 })
 export class InsertPage {
-user = { name: ''};
+user = {id:'', name: ''};
   constructor(public navCtrl: NavController, public navParams: NavParams, public restapiService: RestapiServiceProvider) {
   }
 

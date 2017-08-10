@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestapiServiceProvider } from '../../providers/restapi-service/restapi-service';
 import { InsertPage } from '../../pages/insert/insert';
+import { EditPage } from '../../pages/edit/edit';
 
 @Component({
   selector: 'page-home',
@@ -23,7 +24,7 @@ export class HomePage {
    this.navCtrl.push(InsertPage);
   }
 
-  edit($id){
+  edit(){
    this.navCtrl.push(EditPage);
   }
 
